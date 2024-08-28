@@ -1,0 +1,15 @@
+# Command-line tools
+git
+wget
+docker
+docker-compose
+
+# GUI applications
+google-chrome --cask
+visual-studio-code --cask
+slack --cask
+discord --cask
+iterm2 --cask
+bitwarden --cask
+spotify --cask
+iina --cask  # Media Player
