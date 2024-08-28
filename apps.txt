@@ -13,3 +13,4 @@ iterm2 --cask
 bitwarden --cask
 spotify --cask
 iina --cask  # Media Player
+tailscale --cask
