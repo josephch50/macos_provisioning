@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Install Command Line Tools
+xcode-select –-install
+
 # Install Homebrew if not installed
 if ! command -v brew &> /dev/null; then
     echo "Homebrew not found. Installing..."
