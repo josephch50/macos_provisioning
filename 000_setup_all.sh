@@ -19,3 +19,9 @@ brew upgrade
 
 # Clean up old versions of packages
 brew cleanup
+
+# Generate SSH Keys
+ssh-keygen -q -t ecdsa -N '' <<< $'\ny' >/dev/null 2>&1
+
+# Adding Oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
