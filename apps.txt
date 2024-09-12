@@ -4,6 +4,7 @@ wget
 docker
 docker-compose
 syncthing
+pyenv
 
 # GUI applications
 google-chrome --cask
