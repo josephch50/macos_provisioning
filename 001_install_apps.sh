@@ -3,6 +3,12 @@
 # File containing the list of applications to install
 APPS_FILE="apps.txt"
 
+# Update Homebrew
+brew update
+
+# Upgrade all installed Homebrew packages
+brew upgrade
+
 # Install applications
 while IFS= read -r line; do
     # Skip empty lines and comments
@@ -19,3 +25,6 @@ while IFS= read -r line; do
         brew install "$app_name"
     fi
 done < "$APPS_FILE"
+
+# Clean up old versions of packages
+brew cleanup
