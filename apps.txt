@@ -3,6 +3,7 @@ git
 wget
 docker
 docker-compose
+syncthing
 
 # GUI applications
 google-chrome --cask
@@ -14,3 +15,6 @@ bitwarden --cask
 spotify --cask
 iina --cask  # Media Player
 tailscale --cask
+figma --cask
+notion --cask
+
