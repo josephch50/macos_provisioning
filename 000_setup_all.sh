@@ -24,7 +24,24 @@ brew upgrade
 brew cleanup
 
 # Generate SSH Keys
-ssh-keygen -q -t ecdsa -N '' <<< $'\ny' >/dev/null 2>&1
+SSH_KEY_PATH="$HOME/.ssh/id_ecdsa"
+
+# Check if the SSH key already exists
+if [[ -f "$SSH_KEY_PATH" ]]; then
+    echo "SSH key already exists at $SSH_KEY_PATH."
+else
+    echo "SSH key not found. Generating a new one..."
+    
+    # Generate a new SSH key if not present
+    ssh-keygen -q -t ecdsa -N '' -f "$SSH_KEY_PATH" <<< $'\ny' >/dev/null 2>&1
+    
+    if [[ $? -eq 0 ]]; then
+        echo "SSH key successfully generated at $SSH_KEY_PATH."
+    else
+        echo "Failed to generate SSH key."
+        exit 1
+    fi
+fi
 
 # Adding Oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
